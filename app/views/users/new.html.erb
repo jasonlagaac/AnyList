@@ -1,0 +1,46 @@
+<body>
+	<div class="container">
+		<img id="header" src="/images/header.png"/>
+	<div id="signup-form">
+		<% if !@user.errors.any? %>
+			<h2>Sign Up and Start Wishing!</h2>
+		<% end %>
+	<div id="form-fields">
+		<%= form_for(@user) do |f| %>
+			<%= render 'shared/error_messages'%>
+			<div id="section">
+				<div class="field">
+					<%= f.label :firstname %><br />
+					<%= f.text_field :firstname %>
+				</div>
+				<div class="field">
+					<%= f.label :lastname %><br />
+					<%= f.text_field :lastname %>
+				</div>
+				<div class="field">
+					<%= f.label :email %><br />
+					<%= f.text_field :email %>
+				</div>
+			</div>
+			<div id="section">
+				<div class="field">
+					<%= f.label :username %><br />
+					<%= f.text_field :username %>
+				</div>
+				<div class="field">
+					<%= f.label :password %><br />
+					<%= f.password_field :password %>
+				</div>
+				<div class="field">
+					<%= f.label :password_confirmation, "Password Confirmation" %><br />
+					<%= f.password_field :password_confirmation %>
+				</div>
+			</div>
+			<div class="actions">
+				<%= f.submit "Create My Account" %>
+			</div>
+		<% end %>
+	</div>
+	</div>
+	</div>
+</body>

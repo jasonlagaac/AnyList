@@ -1,0 +1,187 @@
+@font-face {
+	font-family: 'MuseoSlab';
+	src: url('/font/Museo_Slab_500.otf');
+}
+
+@font-face {
+	font-family: 'Lobster';
+	src: url('/font/Lobster.otf');
+}
+
+body {
+	background-image: url("/images/background.png");
+}
+
+.container {
+	width: 950px;
+	height: 680px;
+	background: rgba(255, 255, 255, 0.8);
+	
+	margin-left: 5%;
+	margin-right: 10%;
+	margin-top: 50px;	
+}
+
+
+.container h3 {
+	font-family: MuseoSlab;
+	font-size: 18px;
+	font-weight:normal;
+	color: #5a5a5a;
+}
+.container #header {
+	background-image: url("/images/header.png");
+	margin-left: -50px;
+	margin-top: -50px;
+	
+	opacity: 0.75;
+	filter: alpha(opacity=1);
+}
+
+.container #login-signup  {
+	margin-left: 80px;
+	opacity: 0.7;
+}
+
+.container #login-signup img {
+	border-style: none;
+}
+
+.container #lower-content {
+	margin-top: 90px;
+	margin-left: 30px;	
+}
+
+.container #lower-content #item {
+	width: 280px;
+	height:300px;
+	float: left;
+	padding: 10px;
+}
+
+.container #lower-content #item p {
+	text-align: justify;
+	font-family: Helvetica, san-serif;
+	font-size: 12px;
+	color: #5a5a5a;
+	
+	letter-spacing:0.8px;
+	
+	padding-top: 150px;
+	
+	width: 255px;
+}
+
+.container #signup-form {
+	margin-left:170px;
+	
+	width:650px;
+}
+
+.container #signup-form h2 {
+	font-family: Lobster;
+	font-size:50px;
+	color: #4bb8df;
+}
+
+.container #signup-form label {
+	font-family: MuseoSlab;
+	font-size:15px;
+	color: #5a5a5a;
+	
+	
+}
+
+.container #signup-form #form-fields {
+	margin-left: 40px;
+	margin-top: -40px;
+	width: 500px;
+}
+
+.container #signup-form #form-fields #section {
+	width:200px;
+	padding:20px;
+	float:left;
+}
+
+.container #signup-form #form-fields #section .field {
+	margin-top:10px;
+	padding: 2px;
+}
+
+.container #signup-form #form-fields .actions {
+	margin-left:160px;
+}
+
+.container #signup-form #form-fields .actions input {
+	font-size: 20px;
+	font-family: MuseoSlab;
+}
+
+.container-user {
+	width: 950px;
+	height: 680px;
+	
+	margin-left: 5%;
+	margin-right: 10%;
+	margin-top: -60px;
+}
+
+
+.container-user #user-details {
+	width: 250px;
+	height: 450px;
+	
+	text-align:center;
+	
+	float: left;
+	
+	margin-top: -120px;
+	
+	background: rgba(255, 255, 255, 0.8);
+	
+}
+
+.container-user #user-details #user-edit {
+	padding-left: 30x;
+	margin-top: 380px;
+	
+}
+
+
+.container-user #user-details #user-edit a {
+	font-family: MuseoSlab;
+	font-size:18px;
+	color: #8b8d89;
+	
+	text-decoration: none;
+}
+
+.container-user #user-details #user-edit a:hover {
+	font-family: MuseoSlab;
+	font-size:18px;
+	color: #3a3b39;
+	
+	text-decoration: none;
+}
+
+.container-user #user-list{
+	width: 680px;
+	height: 1000px;
+	 
+	float: right;
+
+	margin-top: -120px;
+
+	background: rgba(255, 255, 255, 0.8);
+}
+
+.container-user h2 {
+	font-family: Lobster;
+	font-size:100px;
+	color: #4bb8df;
+}
+
+
+
+
