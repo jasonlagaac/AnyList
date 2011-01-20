@@ -1,27 +1,20 @@
 <div class="container">
 	<img id="header" src="/images/header.png"/>
 	<div id="signup-form">
-		<h2>Welcome Back! We Missed You!</h2>
+		<div id="title"><h2>Welcome Back!</h2></div>
+
 		<%= form_for(:session, :url => sessions_path) do |f| %>
-		<div id="form-fields">
-			<div id="section">
-				<div class="field">
-					<%= f.label :username %></br>
-					<%= f.text_field :username %>
-				</div>
+			<div class="field">
+				<%= f.label :username %></br>
+				<%= f.text_field :username %>
 			</div>
-			<div id="section">
-				<div class="field">
-					<%= f.label :password %></br>
-					<%= f.password_field :password %>
-				</div>
+			<div class="field">
+				<%= f.label :password %></br>
+				<%= f.password_field :password %>
 			</div>
 			<div class="actions">
-			<%= f.submit "Let Me Back In!" %>
+				<%= f.submit "Let Me Back In!" %>
 			</div>
-		</div>
-	
-			
 		<% end %>
 	</div>
 </div>

@@ -9,17 +9,21 @@
 }
 
 body {
-	background-image: url("/images/background.png");
+	background:url('/images/background.png');
+
 }
 
+
+
+
 .container {
-	width: 950px;
-	height: 680px;
+	width: 780px;
+	height: 580px;
 	background: rgba(255, 255, 255, 0.8);
 	
-	margin-left: 5%;
-	margin-right: 10%;
-	margin-top: 50px;	
+	margin-top: 50px;
+	margin-left:auto;
+	margin-right:auto;	
 }
 
 
@@ -39,7 +43,8 @@ body {
 }
 
 .container #login-signup  {
-	margin-left: 80px;
+	margin-left: auto;
+	margin-right: auto;
 	opacity: 0.7;
 }
 
@@ -47,76 +52,7 @@ body {
 	border-style: none;
 }
 
-.container #lower-content {
-	margin-top: 90px;
-	margin-left: 30px;	
-}
 
-.container #lower-content #item {
-	width: 280px;
-	height:300px;
-	float: left;
-	padding: 10px;
-}
-
-.container #lower-content #item p {
-	text-align: justify;
-	font-family: Helvetica, san-serif;
-	font-size: 12px;
-	color: #5a5a5a;
-	
-	letter-spacing:0.8px;
-	
-	padding-top: 150px;
-	
-	width: 255px;
-}
-
-.container #signup-form {
-	margin-left:170px;
-	
-	width:650px;
-}
-
-.container #signup-form h2 {
-	font-family: Lobster;
-	font-size:50px;
-	color: #4bb8df;
-}
-
-.container #signup-form label {
-	font-family: MuseoSlab;
-	font-size:15px;
-	color: #5a5a5a;
-	
-	
-}
-
-.container #signup-form #form-fields {
-	margin-left: 40px;
-	margin-top: -40px;
-	width: 500px;
-}
-
-.container #signup-form #form-fields #section {
-	width:200px;
-	padding:20px;
-	float:left;
-}
-
-.container #signup-form #form-fields #section .field {
-	margin-top:10px;
-	padding: 2px;
-}
-
-.container #signup-form #form-fields .actions {
-	margin-left:160px;
-}
-
-.container #signup-form #form-fields .actions input {
-	font-size: 20px;
-	font-family: MuseoSlab;
-}
 
 .container-user {
 	width: 950px;
@@ -182,6 +118,44 @@ body {
 	color: #4bb8df;
 }
 
+.container #signup-form {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -50px;
+	width: 550px;
+}
 
+.container #signup-form #title {
+	font-family: Lobster;
+	font-size: 30px;
+	text-align:center;
+	margin-bottom: -30px;
+}
+
+.container #signup-form .field {
+	font-family: MuseoSlab;
+	margin: 0 auto;
+	width: 200px;
+	padding-top:5px;
+}
+
+.container #signup-form #section {
+	float: left;
+	margin: 0 auto;
+	width: 225px;
+	padding: 10px;
+	padding-bottom:30px;
+}
+
+
+.container #signup-form .actions {
+	padding-top: 40px;
+	text-align: center;
+}
+
+.container #signup-form .actions input {
+	font-family: MuseoSlab;
+	font-size: 17px;
+}
 
 

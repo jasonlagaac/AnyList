@@ -1,21 +1,16 @@
-<body>
+
 	<div class="container">
 		<img id="header" src="/images/header.png"/>
 	<div id="signup-form">
 		<% if !@user.errors.any? %>
-			<h2>Sign Up and Start Wishing!</h2>
+			<div id="title"><h2>Sign Up & Start Wishing</h2></div>
 		<% end %>
-	<div id="form-fields">
 		<%= form_for(@user) do |f| %>
 			<%= render 'shared/error_messages'%>
 			<div id="section">
 				<div class="field">
-					<%= f.label :firstname %><br />
-					<%= f.text_field :firstname %>
-				</div>
-				<div class="field">
-					<%= f.label :lastname %><br />
-					<%= f.text_field :lastname %>
+					<%= f.label :username %><br />
+					<%= f.text_field :username %>
 				</div>
 				<div class="field">
 					<%= f.label :email %><br />
@@ -23,10 +18,6 @@
 				</div>
 			</div>
 			<div id="section">
-				<div class="field">
-					<%= f.label :username %><br />
-					<%= f.text_field :username %>
-				</div>
 				<div class="field">
 					<%= f.label :password %><br />
 					<%= f.password_field :password %>
@@ -42,5 +33,3 @@
 		<% end %>
 	</div>
 	</div>
-	</div>
-</body>
