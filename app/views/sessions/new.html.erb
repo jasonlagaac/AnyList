@@ -2,7 +2,9 @@
 	<img id="header" src="/images/header.png"/>
 	<div id="signup-form">
 		<div id="title"><h2>Welcome Back!</h2></div>
-
+		<% flash.each do |key, value| %> 
+			<div id="error"><p><%= value %></p></div>
+		<% end %>
 		<%= form_for(:session, :url => sessions_path) do |f| %>
 			<div class="field">
 				<%= f.label :username %></br>

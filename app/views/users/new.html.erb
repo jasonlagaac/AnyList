@@ -1,5 +1,4 @@
-
-	<div class="container">
+<div class="container">
 		<img id="header" src="/images/header.png"/>
 	<div id="signup-form">
 		<% if !@user.errors.any? %>
@@ -9,21 +8,21 @@
 			<%= render 'shared/error_messages'%>
 			<div id="section">
 				<div class="field">
-					<%= f.label :username %><br />
+					<%= f.label :username %>
 					<%= f.text_field :username %>
 				</div>
 				<div class="field">
-					<%= f.label :email %><br />
+					<%= f.label :email %>
 					<%= f.text_field :email %>
 				</div>
 			</div>
 			<div id="section">
 				<div class="field">
-					<%= f.label :password %><br />
+					<%= f.label :password %>
 					<%= f.password_field :password %>
 				</div>
 				<div class="field">
-					<%= f.label :password_confirmation, "Password Confirmation" %><br />
+					<%= f.label :password_confirmation, "Password Confirmation" %>
 					<%= f.password_field :password_confirmation %>
 				</div>
 			</div>
@@ -32,4 +31,4 @@
 			</div>
 		<% end %>
 	</div>
-	</div>
+</div>

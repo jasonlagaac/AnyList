@@ -47,4 +47,6 @@ group :test do
 	gem 'cucumber-rails'
 	
 	gem 'factory_girl_rails'
+	
+	gem 'launchy'
 end

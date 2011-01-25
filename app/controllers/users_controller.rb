@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     if @user.save
       # Handle a successful save.
       sign_in @user
-      flash[:success] = "Hi, Welcome to your wish list!"
+      flash[:success] = "Welcome to Wishlist"
       redirect_to @user
     else
       @title = "Sign Up"

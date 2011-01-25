@@ -13,7 +13,9 @@ body {
 
 }
 
-
+img {
+	border-style: none;
+}
 
 
 .container {
@@ -34,7 +36,6 @@ body {
 	color: #5a5a5a;
 }
 .container #header {
-	background-image: url("/images/header.png");
 	margin-left: -50px;
 	margin-top: -50px;
 	
@@ -42,16 +43,11 @@ body {
 	filter: alpha(opacity=1);
 }
 
-.container #login-signup  {
-	margin-left: auto;
-	margin-right: auto;
+.container #layoutLinks  {
+	margin-left: 35px;
+	
 	opacity: 0.7;
 }
-
-.container #login-signup img {
-	border-style: none;
-}
-
 
 
 .container-user {
@@ -119,37 +115,38 @@ body {
 }
 
 .container #signup-form {
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: -50px;
+	margin: auto;
 	width: 550px;
 }
 
 .container #signup-form #title {
 	font-family: Lobster;
 	font-size: 30px;
+	color: #3089a8;
 	text-align:center;
 	margin-bottom: -30px;
+	
 }
 
 .container #signup-form .field {
 	font-family: MuseoSlab;
-	margin: 0 auto;
-	width: 200px;
-	padding-top:5px;
+	margin: auto;
+	width: 210px;
+	
 }
 
 .container #signup-form #section {
+	margin-left: 35px;
 	float: left;
-	margin: 0 auto;
-	width: 225px;
-	padding: 10px;
+	width: 210px;
+	
+	
 	padding-bottom:30px;
 }
 
 
 .container #signup-form .actions {
-	padding-top: 40px;
+	padding-top: 20px;
 	text-align: center;
 }
 
@@ -158,4 +155,22 @@ body {
 	font-size: 17px;
 }
 
+.container #signup-form #error {
+	margin: auto;
+	text-align:center;
+	width:500px;
+
+	color: #e33443;
+}
+
+.container #signup-form #error h2 {
+	font-family: Lobster;
+	font-size: 40px;
+}
+
+.container #signup-form #error p {
+	font-family: MuseoSlab;
+	margin-top: -20px;
+	font-size: 15px;
+}
 

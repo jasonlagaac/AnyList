@@ -1,8 +1,8 @@
 
 <div class="container">
 	<img id="header" src="/images/header.png"/>
-	<div id="login-signup">
-		<%= link_to image_tag("buttons/login.png"), signin_path, :class => "login-button" %><br/>
-		<%= link_to image_tag("buttons/signup.png"), signup_path, :class => "signup-button" %>
+	<div id="layoutLinks">
+		<%= link_to image_tag("buttons/login.png"), signin_path, :title=>"login", :class => "login-button" %><br/>
+		<%= link_to image_tag("buttons/signup.png"), signup_path, :title=>"signup", :class => "signup-button" %>
 	</div>	
 </div>

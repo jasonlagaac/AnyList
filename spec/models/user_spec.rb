@@ -16,16 +16,6 @@ describe User do
     User.create!(@attr)
   end
   
-  it "should require a first name" do
-    no_firstname = User.new(@attr.merge(:firstname=>""))
-    no_firstname.should_not be_valid
-  end
-  
-  it "should require a last name" do
-    no_lastname = User.new(@attr.merge(:lastname=>""))
-    no_lastname.should_not be_valid
-  end
-  
   it "should require a usename" do
     no_username = User.new(@attr.merge(:username=>""))
     no_username.should_not be_valid
