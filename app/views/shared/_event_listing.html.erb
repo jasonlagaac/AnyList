@@ -1,0 +1,13 @@
+<div class="event-item">
+	<span class="title"><%= eventlist.title %></span>
+		<% if current_user?(eventlist.user) %>
+			<%= link_to "delete", eventlist, :method => :delete,
+											 :confirm => "You sure?",
+											 :title => eventlist.title %>
+		<% end %>
+
+	<% unless eventlist.items.empty? %>
+		<%= render :partial => 'shared/item_listing', :collection => eventlist.items, :as => :item %>
+	<% end %>
+
+</div>

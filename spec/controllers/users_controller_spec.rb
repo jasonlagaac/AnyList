@@ -30,6 +30,14 @@ describe UsersController do
       get :show, :id => @user
       assigns(:user).should == @user
     end
+    
+    it "should show the user's events" do
+      event1 = Factory(:event, :user => @user, :title => "Foo Bar")
+      event2 = Factory(:event, :user => @user, :title => "Bar Bin")
+      get :show, :id => @user
+      response.should have_content("Foo Bar")
+      response.should have_content("Bar Bin")
+    end
   end
   
   describe "POST 'create'" do
@@ -64,13 +72,11 @@ describe UsersController do
     
     describe "success" do
       before(:each) do
-        @attr = { 
-          :firstname => "Anakin", 
-          :lastname => "Skywalker", 
-          :username => "darth.vader",
+        @attr = {  
+          :username => "darth_vader",
           :email => "darth.vader@sithlord.com",
-          :password => "noooooo",
-          :password_confirmation => "noooooo"
+          :password => "aaaaaa",
+          :password_confirmation => "aaaaaa"
         }
       end
       

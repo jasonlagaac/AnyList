@@ -1,0 +1,122 @@
+.container-user {
+	width: 750px;
+	height: 800px;
+	
+	padding-bottom: 100px;
+	
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.container-user #user-details {
+	width: 250px;
+	height: 450px;
+	
+	text-align:center;
+	
+	float: left;
+	
+	margin-top: -120px;
+	
+	background: rgba(255, 255, 255, 0.8);
+	
+}
+
+.container-user #user-details #user-edit {
+	padding-left: 30x;
+	margin-top: 380px;
+	
+}
+
+
+.container-user #user-details #user-edit a {
+	font-family: MuseoSlab;
+	font-size:18px;
+	color: #8b8d89;
+	
+	text-decoration: none;
+}
+
+.container-user #user-details #user-edit a:hover {
+	font-family: MuseoSlab;
+	font-size:18px;
+	color: #3a3b39;
+	
+	text-decoration: none;
+}
+
+.container-user #user-list{
+	width: 680px;
+	height: 1000px;
+	 
+	float: right;
+
+	margin-top: -120px;
+
+	background: rgba(255, 255, 255, 0.8);
+}
+
+.container-user h2 {
+	font-family: Lobster;
+	font-size: 100px;
+	color: #4bb8df;
+}
+
+.container-user #user-content {
+	width: 300px;
+
+	float: left;
+	padding-left: 10px;
+	margin-top: -120px;
+}
+
+.container-user #user-content .event-item {
+	width: 470px;
+	height: auto;
+	
+	
+	background: rgba(255, 255, 255, 0.8);
+	
+	float: left;
+	padding:15px;
+	
+}
+
+.container-user #user-content .event-item {
+	font-family: DistrictThin;
+	letter-spacing: 0.5px;
+	font-size: 14px;
+	color: #3a3b39;
+}
+
+.container-user #user-content .event-item .title {
+	font-family: MuseoSlab;
+	font-size: 25px;
+	color: #3a3b39;
+}
+
+.container-user #user-content .event-item .item-details {
+	height: 20px;
+}
+
+.container-user #user-content .event-item .item-details .item {
+	padding-left:5px;
+	padding-top:5px;
+	width: 320px;
+	float:left;
+}
+
+.container-user #user-content .event-item .item-details .quantity {
+	width: 20px;
+	height: 20px;
+	padding-top:5px;
+	
+	text-align:center;
+	font-size: 14px;
+	float: left;
+	
+}
+
+
+

@@ -1,6 +1,14 @@
 Thewishlist::Application.routes.draw do
+
+  get "items/create"
+
+  get "items/destroy"
+
   resources :users
-  resource :sessions, :only => [:new, :create, :destroy]
+  resources :events
+  resources :items
+  resources :sessions, :only => [:new, :create, :destroy]
+
   
   match '/main', :to => "pages#main"
   match '/about', :to => "pages#about"

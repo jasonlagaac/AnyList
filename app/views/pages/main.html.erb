@@ -1,8 +1,11 @@
-
-<div class="container">
+<% if signed_in? %>
+	<%= render 'shared/user_page'%>
+<% else %>	
+	<div class="container">
 	<img id="header" src="/images/header.png"/>
 	<div id="layoutLinks">
 		<%= link_to image_tag("buttons/login.png"), signin_path, :title=>"login", :class => "login-button" %><br/>
 		<%= link_to image_tag("buttons/signup.png"), signup_path, :title=>"signup", :class => "signup-button" %>
 	</div>	
 </div>
+<% end %>

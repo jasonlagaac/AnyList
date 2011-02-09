@@ -1,22 +1,20 @@
 <div class="container-user">
 	<div id="username">
-		<h2><%= @user.username %></h2>
+		<h2><%= current_user.username %></h2>
 	</div>
 	<div id="user-details">
-            <% if signed_in? && current_user?(@user) %> 
 		<div id="user-edit">
 			<%= link_to "Account Settings", '#'%><br/>
 			<%= link_to "Sign Out", signout_path %>
 		</div>
-            <% end %>
 	</div>
+	
+	
 	<div id="user-content">
-            <%= render 'shared/events' %>
+          <%= render 'shared/events' %>
 	</div>
 </div>
 
-<% if signed_in? && current_user?(@user) %>
+<% if signed_in? %>
 <%= render 'shared/event_form' %>
 <% end %>
-
-

@@ -1,0 +1,73 @@
+fieldset { display: none; }
+
+#event_create  {
+	width: 420px;
+	height:150px;
+		
+	background: rgba(255, 255, 255, 0.8);
+	
+	text-align:center;
+}
+
+#event_create #form_area {
+	width: 420px;
+	height: 120px;
+	
+	padding-top: 15px;
+	margin: 0 auto;
+}
+
+#event_create #form_area .field {
+	width: 350px;
+	height:40px;
+	
+	background: rgba(255, 255, 255, 0.9);
+	border-radius:6px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#event_create #form_area .field input[type="text"]{
+	outline: none;
+	background: none;
+	font-size:20px;
+	border: none;
+	padding-top:7px;
+
+	float:left;
+}
+
+#event_create #form_area .actions {
+	padding-top: 5px;
+}
+
+#event_create #form_area .actions input[type="submit"]{
+	background-color:#f5f5f5;
+    
+	border:1px solid #dedede;
+	border-top:1px solid #eee;
+	border-left:1px solid #eee;
+
+	font-family:MuseoSlab;
+        font-weight: lighter;
+	font-size:18px;
+	font-weight:bold;
+	color:#565656;
+}
+
+
+#event_create #form_area .heading {
+	font-family: MuseoSlab;
+        font-weight: normal;
+	color: #acd82b;
+	
+	font-size: 33px;
+	padding:1px;
+}
+
+#event_create #form_area .description {
+	font-family: Helvetica;
+	
+	font-size: 13px;
+	padding:1px;
+}

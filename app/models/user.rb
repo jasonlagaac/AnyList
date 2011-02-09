@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   attr_accessor :password
   attr_accessible :username, :email, :password, :password_confirmation
   
+  has_many :events, :dependent => :destroy
   
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   username_regex = /^[a-zA-Z0-9_]*$/
@@ -37,6 +38,10 @@ class User < ActiveRecord::Base
     user = find_by_id(id)
     (user && user.salt == cookie_salt) ? user : nil
   end 
+
+  def eventList 
+    Event.where("user_id = ?", id)
+  end
   
   private
     def encrypt_password
@@ -54,6 +59,5 @@ class User < ActiveRecord::Base
     
     def secure_hash(string)
       Digest::SHA2.hexdigest(string)
-    end
-               
+    end           
 end

@@ -10,21 +10,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110104170251) do
+ActiveRecord::Schema.define(:version => 20110205144110) do
 
-  create_table "lists", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "occasions", :force => true do |t|
-    t.string   "name"
+  create_table "events", :force => true do |t|
+    t.string   "title"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "occasions", ["user_id"], :name => "index_occasions_on_user_id"
+  add_index "events", ["user_id"], :name => "index_events_on_user_id"
+
+  create_table "items", :force => true do |t|
+    t.string   "description"
+    t.string   "name"
+    t.integer  "event_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "items", ["event_id"], :name => "index_items_on_event_id"
 
   create_table "users", :force => true do |t|
     t.string   "username"

@@ -1,0 +1,3 @@
+<% unless @eventlists.empty? %>
+  <%= render :partial => 'shared/event_listing', :collection => @eventlists, :as => :eventlist %>
+<% end %>

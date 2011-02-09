@@ -18,7 +18,7 @@ Feature: Create User
   	  Then I should see "<result>"
   	  
   Examples:
-  	  | username       | email            | password         | password_confirmation | result                                         |
+  	 | username       | email            | password         | password_confirmation | result                                         |
       | a_test_user    | test@example.com | aTestP4ssword_   | aTestP4ssword_        | a_test_user                                    |
       | a failing user | fail@Example     | aFailingPassword | aFlngPassword         | Please check the items that you have entered   |
 	  

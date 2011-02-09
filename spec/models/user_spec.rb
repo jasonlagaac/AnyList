@@ -122,6 +122,70 @@ describe User do
           matching_user.should == @user
         end
     end
+  end
+  
+  describe "event associations" do
+    before(:each) do
+      @user = User.create(@attr)
+      @event1 = Factory(:event, :user => @user, :created_at => 1.day.ago)
+      @event2 = Factory(:event, :user => @user, :created_at => 1.hour.ago)
+    end
     
+    it "should have an events attribute" do
+      @user.should respond_to(:events)
+    end
+    
+    it "should have the right events in the right order" do
+      @user.events.should == [@event2, @event1]
+    end
+    
+    it "should destroy associated microposts" do
+      @user.destroy
+      [@event1, @event2].each do |event|
+        Event.find_by_id(event.id).should be_nil
+      end
+    end
+    
+    describe "event list" do
+      it "should have a event list" do
+        @user.should respond_to(:eventList)
+      end
+
+      it "should include the user's events" do
+        @user.eventList.include?(@event1).should be_true
+        @user.eventList.include?(@event2).should be_true
+      end
+
+      it "should not include a different user's events" do
+        event3 = Factory(:event, 
+                         :user => Factory(:user, :username => "AnotherUser"))
+        @user.eventList.include?(event3).should be_false
+      end
+    end
+    
+    describe "item associations" do
+      before(:each) do
+        @event = Factory(:event, :user => @user, :created_at => 1.day.ago)
+        
+        @item1 = Factory(:item, :event => @event, :created_at => 1.day.ago)
+        @item2 = Factory(:item, :event => @event, :created_at => 1.hour.ago)
+        
+      end
+
+      it "should have an events attribute" do
+        @event.should respond_to(:items)
+      end
+
+      it "should have the right events in the right order" do
+        @event.items.should == [@item2, @item1]
+      end
+
+      it "should destroy associated microposts" do
+        @event.destroy
+        [@item1, @item2].each do |item|
+          Item.find_by_id(item.id).should be_nil
+        end
+      end
+    end
   end
 end
