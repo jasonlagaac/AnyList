@@ -6,7 +6,7 @@
             <% if signed_in? && current_user?(@user) %> 
 		<div id="user-edit">
 			<%= link_to "Account Settings", '#'%><br/>
-			<%= link_to "Sign Out", signout_path %>
+			<%= link_to "Sign Out", signout_path, :title=>"signout" %>
 		</div>
             <% end %>
 	</div>

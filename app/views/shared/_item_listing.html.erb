@@ -1,4 +1,9 @@
 <div class="listed-item">
 	<span><%= item.name %></span>
+	<% if event_owned_by_current_user?(item) %>
+		<%= link_to "delete", item, :method => :delete,
+									:confirm => "You sure?",
+									:title => item.name %>
+	<% end %>
 	<div class="description"><%= item.description %></div>
 </div>

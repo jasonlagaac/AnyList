@@ -1,0 +1,16 @@
+<div id="item_create">
+  <div id="form_area">
+    <span class="heading">Enter an item name and description:</span><br/>
+    <%= form_for Item.new  do |i| %>
+      <div class="field">
+		<%= i.hidden_field :event_id, :value => eventlist.id %>
+		
+        <%= i.text_field :name, :size => "34" %>
+
+        <%= i.text_field :description, :size => "34" %>
+      </div>
+      <%= i.submit "Add my item" %>
+    <%end%>
+  </div>
+</div>
+

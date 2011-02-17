@@ -1,5 +1,5 @@
 class Item < ActiveRecord::Base
-  attr_accessible :name, :description
+  attr_accessible :name, :description, :event_id
 
   belongs_to :event
 
