@@ -1,10 +1,10 @@
 Factory.define :user do |user|
-  user.firstname                    "George"
-  user.lastname                     "Washington"
   user.username                     "george_washington"
   user.email                        "example@example.com"
   user.password                     "foobar"
   user.password_confirmation        "foobar"
+  user.location                     "Sydney"
+  user.bio                          "Crazy man from Sydney"
 end
 
 Factory.define :event do |event|

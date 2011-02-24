@@ -3,7 +3,8 @@
 		<% if current_user?(eventlist.user) %>
 			<%= link_to "delete", eventlist, :method => :delete,
 							 				 :confirm => "You sure?",
-							 				 :title => eventlist.title %>
+							 				 :title => eventlist.title, :id => "delete_event"
+							 				 %>
 		<% end %>
 
 	<% unless eventlist.items.empty? %>

@@ -3,7 +3,8 @@
 	<% if event_owned_by_current_user?(item) %>
 		<%= link_to "delete", item, :method => :delete,
 									:confirm => "You sure?",
-									:title => item.name %>
+									:title => item.name, 
+									:id => "delete_item" %>
 	<% end %>
 	<div class="description"><%= item.description %></div>
 </div>

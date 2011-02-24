@@ -3,12 +3,12 @@ require 'spec_helper'
 describe User do
   before(:each) do
     @attr = {
-      :firstname => "George",
-      :lastname => "Washington",
       :username => "atestuser", 
       :email => "atestuser@something.com",
       :password => "foobarbinbash",
-      :password_confirmation => "foobarbinbash"
+      :password_confirmation => "foobarbinbash",
+      :bio => "blah",
+      :location => "Sydney"
     }
   end
   
@@ -186,6 +186,20 @@ describe User do
           Item.find_by_id(item.id).should be_nil
         end
       end
+    end
+  end
+  
+  describe "general details" do
+    before(:each) do
+      @user = User.create(@attr)
+    end
+    
+    it "should have a location attribute" do
+      @user.should respond_to(:location)
+    end
+    
+    it "should have a bio attribute" do
+      @user.should respond_to(:bio)
     end
   end
 end

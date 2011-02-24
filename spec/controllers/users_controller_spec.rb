@@ -34,9 +34,10 @@ describe UsersController do
     it "should show the user's events" do
       event1 = Factory(:event, :user => @user, :title => "Foo Bar")
       event2 = Factory(:event, :user => @user, :title => "Bar Bin")
+      @user.events.create(event1)
       get :show, :id => @user
-      response.should have_content("Foo Bar")
-      response.should have_content("Bar Bin")
+      response.should have_selector("span", :content => event1.title)
+      response.should have_selector("span", :content => event2.title)
     end
   end
   
@@ -44,12 +45,12 @@ describe UsersController do
     describe "failure" do
       before(:each) do
         @attr = { 
-          :firstname => "", 
-          :lastname => "",
           :username => "", 
           :email => "",
           :password => "",
-          :password_confirmation => ""
+          :password_confirmation => "",
+          :bio => "",
+          :location => ""
         }
       end
     
@@ -76,7 +77,9 @@ describe UsersController do
           :username => "darth_vader",
           :email => "darth.vader@sithlord.com",
           :password => "aaaaaa",
-          :password_confirmation => "aaaaaa"
+          :password_confirmation => "aaaaaa",
+          :bio => "From the quaint planet of Tatooine",
+          :location => "Death Star"
         }
       end
       

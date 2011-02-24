@@ -5,7 +5,7 @@ Given /^that I am an anonymous user on the root page$/ do
 end
 
 When /^I press the "(.+)" link$/ do |link|
-  click_link (link.downcase)
+  click_link (link)
 end
 
 Then /^I should be redirected to the page titled "Sign Up"$/ do

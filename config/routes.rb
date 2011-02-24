@@ -1,10 +1,9 @@
 Thewishlist::Application.routes.draw do
+  resources :users do
+    post 'update_password', :on => :member
+    post 'update_details', :on => :member
+  end
 
-  get "items/create"
-
-  get "items/destroy"
-
-  resources :users
   resources :events
   resources :items
   resources :sessions, :only => [:new, :create, :destroy]
@@ -17,7 +16,7 @@ Thewishlist::Application.routes.draw do
   
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
-  
+
   
   root :to => "pages#main"
 

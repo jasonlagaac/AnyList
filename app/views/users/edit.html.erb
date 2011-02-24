@@ -1,24 +1,31 @@
-<h1>Edit User</h1>
-
-<%= form_for(@user) do |f| %>
+<h1>Edit Your Details</h1>
+<%= form_for :user, @user, :url => {:action => "update_details"} do |f| %>
 	<%= render 'shared/error_messages' %>
 	<div class="field">
-		<%= f.label :username %><br />
-		<%= f.text_field :username %>
+		<%= f.label :location %><br />
+		<%= f.text_field :location %>
 	</div>
 	<div class="field">
-		<%= f.label :email %><br />
-		<%= f.text_field :email %>
+		<%= f.label :bio %><br />
+		<%= f.text_field :bio %>
 	</div>
+	<div class="actions">
+		<%= f.submit "Update My Details" %>
+	</div>
+<% end %>
+
+
+<%= form_for :user, @user, :url => {:action => "update_password"} do |f| %>
+	<%= render 'shared/error_messages' %>
 	<div class="field">
 		<%= f.label :password %><br />
 		<%= f.password_field :password %>
 	</div>
 	<div class="field">
-		<%= f.label :password_confirmation, "Confirmation" %><br />
+		<%= f.label :password_confirmation, "Password Confirmation" %><br />
 		<%= f.password_field :password_confirmation %>
 	</div>
 	<div class="actions">
-		<%= f.submit "Update My Details" %>
+		<%= f.submit "Change My Password" %>
 	</div>
 <% end %>
