@@ -4,13 +4,20 @@
 			<%= link_to "delete", eventlist, :method => :delete,
 							 				 :confirm => "You sure?",
 							 				 :title => eventlist.title, :id => "delete_event"
-							 				 %>
+			%>
 		<% end %>
 
 	<% unless eventlist.items.empty? %>
 		<%= render :partial => 'shared/item_listing', :collection => eventlist.items, :as => :item %>
 	<% end %>
-	
+  
+  <% if current_user?(eventlist.user) %>
+    <%= form_tag :controller => :events, :action => :update, :id => eventlist.id do %>
+      <%= text_field_tag 'edit_event_title'  %>
+      <%= submit_tag "Change Event" %>
+    <% end %>
+  <% end %>
+  
 	<% if current_user?(eventlist.user) %>
 		<%= render :partial => 'shared/item_form', :locals => {:eventlist => eventlist } %>
 	<% end %>

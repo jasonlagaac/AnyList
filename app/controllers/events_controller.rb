@@ -13,6 +13,18 @@ class EventsController < ApplicationController
     end
   end
 
+  def update
+    @event = current_user.events.find_by_id(params[:id]) 
+
+  unless params[:edit_event_title].empty?  
+      @event.update_attribute(:title, params[:edit_event_title])
+      flash[:success] = "Event Successfully Changed"
+      redirect_to root_path
+    else
+      redirect_to root_path
+    end
+  end
+
   def destroy
     @event.destroy
     redirect_back_or root_path
